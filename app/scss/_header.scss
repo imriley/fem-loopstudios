@@ -1,9 +1,6 @@
 .header {
   position: relative;
   height: 100vh;
-  @include breakpoint-up(medium) {
-    height: 40.625rem;
-  }
   &::before {
     content: "";
     position: absolute;
