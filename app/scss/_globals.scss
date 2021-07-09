@@ -31,31 +31,48 @@ h3 {
   font-weight: 300;
   text-transform: uppercase;
   font-family: "Josefin Sans", sans-serif;
-  line-height: 1.15;
+  line-height: 1.5;
   color: $white;
 }
 
+.btn {
+  text-transform: uppercase;
+  padding: 15px 38px;
+  border: 2px solid $black;
+  letter-spacing: 6px;
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  @include breakpoint-up(medium) {
+    border: 2px solid $vdkgray;
+    padding: 14px 38px;
+  }
+  &:hover {
+    border-color: $black;
+    background-color: $black;
+    color: $white;
+  }
+}
+
 .container {
-    margin: 0 auto;
-    max-width: 69.375rem;
-    &--pall {
-        padding: 2.5rem 1.5rem;
-        @include breakpoint-up(large) {
-            padding: 4rem 3rem;
-        }
+  margin: 0 auto;
+  max-width: 69.375rem;
+  &--pall {
+    padding: 2.5rem 1.5rem;
+    @include breakpoint-up(large) {
+      padding: 4rem 3rem;
     }
-    &--px {
-        padding-right: 1.5rem;
-        padding-left: 1.5rem;
+  }
+  &--px {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  &--py {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    @include breakpoint-up(large) {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
     }
-    &--py {
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
-        @include breakpoint-up(large) {
-            padding-top: 4rem;
-            padding-bottom: 4rem;
-        }
-    }
+  }
 }
 .no-scroll {
   overflow: hidden;
@@ -70,4 +87,3 @@ h3 {
     display: none;
   }
 }
-

@@ -1,0 +1,53 @@
+.cpy {
+  &__box {
+    margin-top: 6rem;
+    @include breakpoint-up(large) {
+      position: relative;
+      display: flex;
+      margin-top: 10rem;
+    }
+  }
+  &__image {
+    height: 225px;
+    background-image: url("/images/mobile/image-interactive.jpg");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    @include breakpoint-up(medium) {
+      min-height: 373px;
+    }
+    @include breakpoint-up(large) {
+      height: 31.25rem;
+      min-width: 45.875rem;
+      background-size: cover;
+      background-image: url("/images/desktop/image-interactive.jpg");
+    }
+  }
+  &__content {
+    margin-top: 3.125rem;
+    text-align: center;
+    @include breakpoint-up(large) {
+      width: 546px;
+      padding-top: 6.125rem;
+      padding-left: 6rem;
+      margin-right: 3rem;
+      margin-bottom: -2px;
+      bottom: 4rem;
+      right: 0;
+      position: absolute;
+      background: white;
+      text-align: left;
+    }
+    h2 {
+      color: $black;
+      font-size: 24px;
+      letter-spacing: 5px;
+      @include breakpoint-up(medium) {
+        font-size: 36px;
+      }
+    }
+    p {
+      color: $dkgray;
+    }
+  }
+}

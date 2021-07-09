@@ -11,15 +11,13 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("/images/mobile/image-hero.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/mobile/image-hero.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
     @include breakpoint-up(medium) {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url(/images/desktop/image-hero.jpg);
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/images/desktop/image-hero.jpg);
     }
   }
   &.open {
@@ -72,6 +70,7 @@
       height: 3px;
       background-color: $white;
       transform-origin: 1px 2px;
+      transition: transform 300ms ease-in-out;
       &:not(:last-child) {
         margin-bottom: 0.3125rem;
       }

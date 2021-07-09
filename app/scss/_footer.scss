@@ -1,0 +1,100 @@
+.footer {
+  background-color: $black;
+  text-align: center;
+  &__content {
+    padding-top: 44px;
+    padding-bottom: 44px;
+    @include breakpoint-up(medium) {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    a {
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        height: 0.25rem;
+        width: 80%;
+        left: 50%;
+        right: 0;
+        bottom: -10px;
+        opacity: 0;
+        transform: translateX(-50%);
+        position: absolute;
+        background: $white;
+        transition: opacity 300ms ease-in-out;
+      }
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__one {
+    text-align: center;
+    @include breakpoint-up(medium) {
+      text-align: left;
+    }
+  }
+  &__two {
+    margin-top: 50px;
+    text-align: center;
+    @include breakpoint-up(medium) {
+      text-align: right;
+      margin-top: 0px;
+    }
+  }
+  &__logo {
+    img {
+      width: 145px;
+      height: 25px;
+      @include breakpoint-up(large) {
+        width: 12.125rem;
+        height: 2.125rem;
+      }
+    }
+  }
+  &__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include breakpoint-up(medium) {
+      flex-direction: row;
+    }
+    a {
+      color: $white;
+      margin-top: 24px;
+      position: relative;
+      @include breakpoint-up(medium) {
+        margin-right: 35px;
+      }
+    }
+  }
+
+  &__socials {
+    a {
+      position: relative;
+      &:not(:last-child) {
+        margin-right: 16px;
+      }
+    }
+  }
+  &__copyright {
+    font-size: 14px;
+    color: $vdkgray;
+    margin-top: 24px;
+  }
+  .attribution {
+    color: $dkgray;
+    padding-bottom: 2px;
+    a {
+      color: $white;
+      transition: color 300ms ease-in-out;
+      &:hover {
+        color: #ccc;
+      }
+    }
+  }
+}
