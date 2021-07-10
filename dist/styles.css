@@ -40,6 +40,7 @@ h3 {
   padding: 15px 38px;
   border: 2px solid black;
   letter-spacing: 6px;
+  color: black;
   transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
 }
 
